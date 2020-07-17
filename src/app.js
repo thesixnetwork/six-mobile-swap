@@ -465,6 +465,7 @@ class App extends Component {
 
 
 
+<<<<<<< HEAD
                     <View style={{ flex: 1, backgroundColor: '#ffffff', borderRadius: 4, marginTop: 100, marginLeft: 20, marginRight: 20, paddingTop: 40, height: 60 }}>
                         <View style={{ borderBottomWidth: 2, borderBottomColor: '#EDEDED', borderBottomStyle: 'dashed', paddingBottom: 20, marginLeft: 20, marginRight: 20 }}>
                             <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#484848', textAlign: 'center', }}>Your token swap is on process.</Text>
@@ -514,6 +515,9 @@ class App extends Component {
                                     9:30 AM
                                 </Text>
                             </View>
+=======
+                    {/* <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginBottom: 50 }}>
+>>>>>>> 31a8e8a586e792732376eb59124e8cbc099fe98a
 
                         </View>
                     </View>
@@ -532,7 +536,113 @@ class App extends Component {
                             }}
                             title="Home"
                         />
-                    </View>
+                    </View> */}
+
+
+
+
+              {/* <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop:100}}>
+                <View >
+                <Text style={{ fontSize:16, color:'#FFFFFF'}}>Please enter your ticket ID</Text>
+                </View>
+                <View style={{ height:40}}></View>
+                <View style={{ height:72,backgroundColor: '#ffffff', borderRadius:4 ,width:'100%'}}>
+                <View style={{ flex:1,flexDirection:'row'}}>
+                <View style={{ width:6, backgroundColor:'#EBBE44', borderRadius:4}}>
+                </View>
+
+                <View style={{ flexDirection:'column', width:'100%'}}>
+                <Text style={{ fontSize:12, color:'#7D7D7D' , paddingLeft:14, paddingTop:14}}>Ticket ID</Text>
+                <TextInput style={{ fontSize:18, fontWeight:'bold', color:'#484848', paddingLeft:14,  paddingBottom:14, marginTop:6}}>XXXXXX</TextInput>
+                <View style={{ width: '100%', backgroundColor:'#7D7D7D15' ,height:1}}></View>
+                </View>
+                </View>
+                </View>
+                <View style={{ height:40}}></View>
+                
+                <Button  
+                    buttonStyle={{
+                    width:270,
+                    height:50,
+                    backgroundColor: "#FFD76A",
+                    borderRadius: 25,
+                }} 
+                titleStyle={{
+                    color:'#484848'
+                }}
+                title="Check"
+                />
+               </View>
+               <View style={{ alignItems:'center', flexDirection:'column'}}>
+               <Text style={{ color:'#ffffff' , marginBottom:20}}>Powered by</Text></View> */}
+
+
+
+
+
+               {/* <View style={{flex:1, backgroundColor:'#111558'}}>
+
+               <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+               <View style={{ height:72,backgroundColor: '#ffffff', borderRadius:4 ,width:295,height:205}}>
+                   <View style={{ flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+                       <View style={{ width:67,height:60,backgroundColor:'#484848',marginBottom:20}}></View>
+                   <Text style={{ fontSize:14, color:'#484848'}}>Your token swap is </Text>
+                   <Text style={{ fontSize:18, fontWeight:'bold',color:'#484848'}}>Completed</Text>
+                </View>
+               </View>
+               <View style={{height:20}}>
+
+               </View>
+               <Button  
+                    buttonStyle={{
+                    width:270,
+                    height:50,
+                    backgroundColor: "#FFD76A",
+                    borderRadius: 25,
+                }} 
+                titleStyle={{
+                    color:'#484848'
+                }}
+                title="OK"
+                />
+               </View>
+               </View> */}
+
+
+
+
+               <View style={{flex:1, backgroundColor:'#111558'}}>
+
+               <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+               <View style={{ height:72,backgroundColor: '#ffffff', borderRadius:4 ,width:295,height:205}}>
+                   <View style={{ flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+                       <View style={{ width:67,height:60,backgroundColor:'#484848',marginBottom:20}}></View>
+                   <Text style={{ fontSize:14, color:'#484848'}}>Your token swap is </Text>
+                   <Text style={{ fontSize:18, fontWeight:'bold',color:'#484848'}}>On process</Text>
+                </View>
+               </View>
+               <View style={{height:20}}>
+
+               </View>
+               <Button  
+                    buttonStyle={{
+                    width:270,
+                    height:50,
+                    backgroundColor: "#FFD76A",
+                    borderRadius: 25,
+                }} 
+                titleStyle={{
+                    color:'#484848'
+                }}
+                title="OK"
+                />
+               </View>
+               </View>
+
+
+
+
+
                 </View>
             </LinearGradient >
         )
