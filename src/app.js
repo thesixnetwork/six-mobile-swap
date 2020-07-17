@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 import { fetchData } from './actions'
 import { connect } from 'react-redux'
 import LinearGradient from 'react-native-linear-gradient';
-import { Button, colors } from 'react-native-elements';
+import { Button, colors, Divider } from 'react-native-elements';
 
 class App extends Component {
 
@@ -465,11 +465,60 @@ class App extends Component {
 
 
 
-                    <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginBottom: 50 }}>
+                    <View style={{ flex: 1, backgroundColor: '#ffffff', borderRadius: 4, marginTop: 100, marginLeft: 20, marginRight: 20, paddingTop: 40, height: 60 }}>
+                        <View style={{ borderBottomWidth: 2, borderBottomColor: '#EDEDED', borderBottomStyle: 'dashed', paddingBottom: 20, marginLeft: 20, marginRight: 20 }}>
+                            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#484848', textAlign: 'center', }}>Your token swap is on process.</Text>
+                        </View>
+                        <View>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#484848', textAlign: 'center', marginTop: 20 }}>
+                                Ticket ID : XXXXX
+                            </Text>
+                            <Text style={{ fontSize: 14, color: '#484848', textAlign: 'center', marginTop: 10 }}>
+                                Please use the following information
+                            </Text>
+                            <Text style={{ fontSize: 14, color: '#484848', textAlign: 'center' }}>
+                                to transfer SIX on Stellar
+                            </Text>
+                            <Text style={{ fontSize: 14, color: '#484848', paddingLeft: 20, marginTop: 30 }}>
+                                Name-Surname
+                            </Text>
+                            <Text style={{ fontSize: 14, fontWeight: '800', color: '#484848', paddingLeft: 20, marginTop: 10 }}>
+                                Win Pollert
+                            </Text>
+                            <Text style={{ fontSize: 14, color: '#484848', paddingLeft: 20, marginTop: 30 }}>
+                                To
+                            </Text>
+                            <Text style={{ fontSize: 14, fontWeight: '800', color: '#484848', paddingLeft: 20, marginTop: 10 }}>
+                                uswwldslddss92928wspcwk298agjzjcsskjs2
+                            </Text>
+                            <Text style={{ fontSize: 14, color: '#484848', paddingLeft: 20, marginTop: 30 }}>
+                                Memo type : Text
+                            </Text>
 
+                            <Text style={{ fontSize: 14, fontWeight: '800', color: '#484848', paddingLeft: 20, marginTop: 10 }}>
+                                SwappingSIX
+                            </Text>
+                            <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginRight: 20 }}>
+                                <Text style={{ fontSize: 14, color: '#484848', paddingLeft: 20, marginTop: 30 }}>
+                                    Date
+                                </Text>
+                                <Text style={{ fontSize: 14, color: '#484848', paddingLeft: 20, marginTop: 30 }}>
+                                    Time
+                                </Text>
+                            </View>
+                            <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginRight: 20 }}>
+                                <Text style={{ fontSize: 14, fontWeight: '800', color: '#484848', paddingLeft: 20, marginTop: 10 }}>
+                                    20 June 2018
+                                </Text>
+                                <Text style={{ fontSize: 14, fontWeight: '800', color: '#484848', paddingLeft: 20, marginTop: 10 }}>
+                                    9:30 AM
+                                </Text>
+                            </View>
+
+                        </View>
                     </View>
 
-                    <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginBottom: 110 }}>
+                    <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 50, marginBottom: 200 }}>
                         <Button
                             buttonStyle={{
                                 width: 270,
@@ -485,7 +534,7 @@ class App extends Component {
                         />
                     </View>
                 </View>
-            </LinearGradient>
+            </LinearGradient >
         )
     }
 
