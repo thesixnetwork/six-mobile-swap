@@ -465,14 +465,13 @@ class App extends Component {
 
 
 
-<<<<<<< HEAD
                     <View style={{ flex: 1, backgroundColor: '#ffffff', borderRadius: 4, marginTop: 100, marginLeft: 20, marginRight: 20, paddingTop: 40, height: 60 }}>
                         <View style={{ borderBottomWidth: 2, borderBottomColor: '#EDEDED', borderBottomStyle: 'dashed', paddingBottom: 20, marginLeft: 20, marginRight: 20 }}>
                             <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#484848', textAlign: 'center', }}>Your token swap is on process.</Text>
                         </View>
                         <View>
                             <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#484848', textAlign: 'center', marginTop: 20 }}>
-                                Ticket ID : XXXXX
+                                Ticket ID : XXXXXX
                             </Text>
                             <Text style={{ fontSize: 14, color: '#484848', textAlign: 'center', marginTop: 10 }}>
                                 Please use the following information
@@ -515,9 +514,6 @@ class App extends Component {
                                     9:30 AM
                                 </Text>
                             </View>
-=======
-                    {/* <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginBottom: 50 }}>
->>>>>>> 31a8e8a586e792732376eb59124e8cbc099fe98a
 
                         </View>
                     </View>
@@ -580,7 +576,7 @@ class App extends Component {
 
 
 
-               {/* <View style={{flex:1, backgroundColor:'#111558'}}>
+                    {/* <View style={{flex:1, backgroundColor:'#111558'}}>
 
                <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
                <View style={{ height:72,backgroundColor: '#ffffff', borderRadius:4 ,width:295,height:205}}>
@@ -611,33 +607,33 @@ class App extends Component {
 
 
 
-               <View style={{flex:1, backgroundColor:'#111558'}}>
+                    <View style={{ flex: 1, backgroundColor: '#111558' }}>
 
-               <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-               <View style={{ height:72,backgroundColor: '#ffffff', borderRadius:4 ,width:295,height:205}}>
-                   <View style={{ flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-                       <View style={{ width:67,height:60,backgroundColor:'#484848',marginBottom:20}}></View>
-                   <Text style={{ fontSize:14, color:'#484848'}}>Your token swap is </Text>
-                   <Text style={{ fontSize:18, fontWeight:'bold',color:'#484848'}}>On process</Text>
-                </View>
-               </View>
-               <View style={{height:20}}>
+                        <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                            <View style={{ height: 72, backgroundColor: '#ffffff', borderRadius: 4, width: 295, height: 205 }}>
+                                <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                                    <View style={{ width: 67, height: 60, backgroundColor: '#484848', marginBottom: 20 }}></View>
+                                    <Text style={{ fontSize: 14, color: '#484848' }}>Your token swap is </Text>
+                                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#484848' }}>On process</Text>
+                                </View>
+                            </View>
+                            <View style={{ height: 20 }}>
 
-               </View>
-               <Button  
-                    buttonStyle={{
-                    width:270,
-                    height:50,
-                    backgroundColor: "#FFD76A",
-                    borderRadius: 25,
-                }} 
-                titleStyle={{
-                    color:'#484848'
-                }}
-                title="OK"
-                />
-               </View>
-               </View>
+                            </View>
+                            <Button
+                                buttonStyle={{
+                                    width: 270,
+                                    height: 50,
+                                    backgroundColor: "#FFD76A",
+                                    borderRadius: 25,
+                                }}
+                                titleStyle={{
+                                    color: '#484848'
+                                }}
+                                title="OK"
+                            />
+                        </View>
+                    </View>
 
 
 
