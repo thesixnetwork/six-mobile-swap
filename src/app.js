@@ -2,12 +2,60 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 import { fetchData } from './actions'
 import { connect } from 'react-redux'
+import Screen1 from './screens/drawer/screen1'
+import Screen2 from './screens/drawer/screen2'
+import Screen3 from './screens/drawer/screen3'
+import Tab1 from './screens/tabs/Tab1'
+import Tab2 from './screens/tabs/Tab2'
+import Tab3 from './screens/tabs/Tab3'
+import Feed from './screens/feed'
+import Detail from './screens/detail'
+import Onboarding1 from './screens/onboarding/onboarding1'
+import Onboarding2 from './screens/onboarding/onboarding2'
+import Informationinput from './screens/verify/Informationinput.screen'
+import Phoneinput from './screens/verify/Phoneinput.screen'
+import Swap1 from './screens/swap/swap1'
+import Swapverify from './screens/swap/swapverify'
+import Swap2 from './screens/swap/swap2'
+import Swap3 from './screens/swap/swap3'
+import Swapconfirm from './screens/swap/swapconfirm'
+import Swapdone from './screens/swap/swapdone'
+import Swapstatus from './screens/swap/swapstatus'
+
 import LinearGradient from 'react-native-linear-gradient';
 import { Button, colors } from 'react-native-elements';
+import {NavigationContainer } from '@react-navigation/native'
+import { createDrawerNavigator} from '@react-navigation/drawer'
+import { createStackNavigator} from '@react-navigation/stack'
+import {createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import SplashScreen from 'react-native-splash-screen'
+
+const Drawer = createDrawerNavigator()
+const Stack = createStackNavigator()
+const MaterialBottomTabs = createMaterialBottomTabNavigator()
+const MaterialTopTabs = createMaterialTopTabNavigator()
+ 
+
 
 class App extends Component {
 
+    componentDidMount() {
+    	// do stuff while splash screen is shown
+        // After having done stuff (such as async tasks) hide the splash screen
+        SplashScreen.hide();
+    }
+
     render() {
+
+        // createHomeStack= ()=>
+        //   <Stack.Navigator>
+        //       <Stack.Screen name="Feed"component={Feed}/>
+        //       <Stack.Screen name="Detail"component={Detail}/>
+        //       <Stack.Screen name="Onboarding1"component={Onboarding1}/>
+        //   </Stack.Navigator> 
         const {
             container,
             header,
@@ -19,14 +67,49 @@ class App extends Component {
         props = this.props
 
         return (
-            <LinearGradient
-                colors={['#4A00E0', '#8E2DE2']}
-                style={{ flex: 1 }}
-            >
-                <View style={container}>
-                    {/* <Image resizeMethod='center' style={image}/> */}
-                    {/* <Text style={header}>Redux Example</Text> */}
-                    {/* <View style={{ flex:1, justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
+            // <View></View>
+            // <View>
+            //     <Text style={{fontSize:100}}>kmdcjenrfjengfhnghnekfmwkedmkwemdwe</Text>
+            // </View>
+
+            <SafeAreaProvider>
+            <NavigationContainer>
+              <Stack.Navigator headerMode="none">
+                <Stack.Screen name="Feed" component={Feed} />
+                <Stack.Screen name="Onboarding1" component={Onboarding1} />
+                <Stack.Screen name="Onboarding2" component={Onboarding2} />
+                <Stack.Screen name="Informationinput" component={Informationinput} />
+                <Stack.Screen name="Phoneinput" component={Phoneinput} />
+                <Stack.Screen name="Swap1" component={Swap1} />
+                <Stack.Screen name="Swapverify" component={Swapverify} />
+                <Stack.Screen name="Swap2" component={Swap2} />
+                <Stack.Screen name="Swap3" component={Swap3} />
+                <Stack.Screen name="Swapconfirm" component={Swapconfirm} />
+                <Stack.Screen name="Swapdone" component={Swapdone} />
+                <Stack.Screen name="Swapstatus" component={Swapstatus} />
+              </Stack.Navigator>
+            </NavigationContainer>
+          </SafeAreaProvider>
+            // <NavigationContainer>
+            //      {/* <Stack.Screen name="Onboarding1"component={Onboarding1}/> */}
+            //     <Drawer.Navigator>
+            //         <Drawer.Screen name="Home" children={createHomeStack}/>
+            //         <Drawer.Screen name="Contacts" component = {Screen1} />
+            //         <Drawer.Screen name="Favorites" component = {Screen2}/>
+            //         <Drawer.Screen name="Settings" component = {Screen3}/>
+
+
+            //     </Drawer.Navigator>
+
+            // </NavigationContainer>
+            // <LinearGradient
+            //     colors={['#4A00E0', '#8E2DE2']}
+            //     style={{ flex: 1 }}
+            // >
+               /* <View style={container}>
+                    {/* <Image resizeMethod='center' style={image}/> */
+                    /* <Text style={header}>Redux Example</Text> */
+                    /* <View style={{ flex:1, justifyContent:'center', alignItems:'center', flexDirection:'column'}}>
                 <Button  
                 buttonStyle={{
                     width:270,
@@ -71,11 +154,11 @@ class App extends Component {
                         ): null
                     }
 
-                </View> */}
+                </View> */
 
 
 
-                    {/* <View style={{ flex:1,backgroundColor: '#ffffff', borderRadius:10 ,marginTop:100 , marginBottom: 30 , paddingTop:40}}>
+                    /* <View style={{ flex:1,backgroundColor: '#ffffff', borderRadius:10 ,marginTop:100 , marginBottom: 30 , paddingTop:40}}>
                 <Image style={{  justifyContent:'center',alignItems:'center' , height: 167, width:283,  marginLeft:40}} ></Image>
                 <View style={{flexDirection:'row', paddingLeft: 16, justifyContent:'space-between'}}>
                     <Text style={{ color:'#8E2DE2', fontWeight:'bold', fontSize:12, marginLeft:12}}>Stellar Lumen</Text>
@@ -107,11 +190,11 @@ class App extends Component {
                     color:'#484848'
                 }}
                 title="Next"
-                /></View> */}
+                /></View> */
 
 
 
-                    {/* <View style={{ flex:1,backgroundColor: '#ffffff', borderRadius:10 ,marginTop:100 , marginBottom: 30 , paddingTop:40}}>
+                    /* <View style={{ flex:1,backgroundColor: '#ffffff', borderRadius:10 ,marginTop:100 , marginBottom: 30 , paddingTop:40}}>
              <View style={{ height:121}}></View>
              <View style={{ flex:1,padding:16, flexDirection:'column', justifyContent:'space-between'}}>
              <Text style={{fontSize:14, fontWeight:'bold', color:'#484848'}}>Important Notes <Text style={{fontSize:14, fontWeight:'bold', color:'#8E2DE2'}}>(Please read carefully - 
@@ -148,12 +231,12 @@ class App extends Component {
                     color:'#484848'
                 }}
                 title="Done"
-                /></View> */}
+                /></View> */
 
 
 
 
-                    {/* <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop:100}}>
+                    /* <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop:100}}>
                 <View >
                 <Text style={{ fontSize:16, color:'#FFFFFF'}}>Please enter your information</Text>
                 </View>
@@ -193,13 +276,13 @@ class App extends Component {
                </View>
                <View style={{ alignItems:'center', flexDirection:'column'}}>
                <Text style={{ color:'#ffffff'}}>Powered by</Text></View>
-                */}
+                */
 
 
 
 
 
-                    {/* <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop:100}}>
+                    /* <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop:100}}>
             <View >
                 <Text style={{ fontSize:16, color:'#FFFFFF'}}>Please type your verification code</Text>
             </View>
@@ -247,14 +330,14 @@ class App extends Component {
             <Text style={{ fontSize: 16, color:'#ffffff'}}>Ref No.<Text style={{color:'#ffffff',fontSize:16, fontWeight:'bold'}}> XXXX</Text></Text>
             <View style={{ height:20}}></View>
             <Text style={{ fontSize: 16, color:'#ffffff'}}>Didn’t receive an SMS?<Text style={{color:'#FFD76A',fontSize:16, fontWeight:'bold' ,fontStyle:'italic'}}> Try again</Text></Text>
-            </View> */}
+            </View> */
 
 
 
 
 
 
-                    {/* <View style={{ flex:1,backgroundColor:'#F5F5F8'}}>
+                    /* <View style={{ flex:1,backgroundColor:'#F5F5F8'}}>
             <View style={{ marginTop:100, marginLeft:16, marginRight:16}}>
             <Text style={{ fontSize: 14, color:'#7D7D7D'}}>Please enter your Klaytn wallet address</Text>
             <View style={{ height:20}}></View>
@@ -280,7 +363,7 @@ class App extends Component {
                 />
                 </View>
                 <View style={{ height:40}}></View>
-            </View> */}
+            </View> */
 
 
 
@@ -289,7 +372,7 @@ class App extends Component {
 
 
 
-                    {/* <View style={{ flex:1,backgroundColor: '#ffffff', borderRadius:10 ,marginTop:50  , paddingTop:40}}>
+                    /* <View style={{ flex:1,backgroundColor: '#ffffff', borderRadius:10 ,marginTop:50  , paddingTop:40}}>
             <View style={{ height:50}}></View>
             <View style={{ flexDirection:'column', padding:16}}>
             <Text style={{ fontSize:14, fontWeight:'bold' ,color:'#484848'}}>Waring</Text>
@@ -338,13 +421,13 @@ class App extends Component {
             </View>
             </View>
         </View>
-        <View style={{ height:320}}></View> */}
+        <View style={{ height:320}}></View> */
 
 
 
 
 
-                    {/* <View style={{ flex:1,backgroundColor:'#F5F5F8'}}>
+                    /* <View style={{ flex:1,backgroundColor:'#F5F5F8'}}>
             <View style={{ marginTop:100, marginLeft:16, marginRight:16}}>
             <Text style={{ fontSize: 14, color:'#7D7D7D'}}>Klaytn wallet address</Text>
             <View style={{ height:20}}></View>
@@ -392,13 +475,13 @@ class App extends Component {
                     fontSize:18
                 }}
                 title="Next"
-             /> */}
+             /> */
 
 
 
 
 
-                    {/* <View style={{ flex:1,backgroundColor:'#F5F5F8'}}>
+                    /* <View style={{ flex:1,backgroundColor:'#F5F5F8'}}>
                         <View style={{ width:158, height:93 ,borderRadius:10, backgroundColor:'#ffffff', justifyContent:'center', alignItems:'center'}}>
                         </View>
                         <Text style={{ fontSize:14, color:'#7D7D7D'}}>You are swapping SIX on Stellar to this Klaytn address</Text>
@@ -427,7 +510,7 @@ class App extends Component {
                         }}
                         title="Next"
                     />
-                    </View> */}
+                    </View> */
 
 
 
@@ -435,7 +518,7 @@ class App extends Component {
 
 
 
-                    {/* <View style={{ flex: 1, backgroundColor: '#F5F5F8' }}>
+                    /* <View style={{ flex: 1, backgroundColor: '#F5F5F8' }}>
                         <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#484848' }}>Swap confirmation</Text>
                         <Text style={{ fontSize: 14, color: '#484848' }}>Please transfer SIX on Stellar to:</Text>
                         <View style={{ height: 50, backgroundColor: '#C1C1C115', borderRadius: 8, borderColor: '#7D7D7D25', borderWidth: 1 }}>
@@ -460,12 +543,12 @@ class App extends Component {
                             }}
                             title="Confirm"
                         />
-                    </View> */}
+                    </View> */
 
 
 
 
-                    {/* <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginBottom: 50 }}>
+                    /* <View style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginBottom: 50 }}>
 
                     </View>
 
@@ -483,12 +566,12 @@ class App extends Component {
                             }}
                             title="Home"
                         />
-                    </View> */}
+                    </View> */
 
 
 
 
-              {/* <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop:100}}>
+              /* <View style={{flex:1, flexDirection:'column', alignItems:'center', marginTop:100}}>
                 <View >
                 <Text style={{ fontSize:16, color:'#FFFFFF'}}>Please enter your ticket ID</Text>
                 </View>
@@ -521,13 +604,13 @@ class App extends Component {
                 />
                </View>
                <View style={{ alignItems:'center', flexDirection:'column'}}>
-               <Text style={{ color:'#ffffff' , marginBottom:20}}>Powered by</Text></View> */}
+               <Text style={{ color:'#ffffff' , marginBottom:20}}>Powered by</Text></View> */
 
 
 
 
 
-               {/* <View style={{flex:1, backgroundColor:'#111558'}}>
+               /* <View style={{flex:1, backgroundColor:'#111558'}}>
 
                <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
                <View style={{ height:72,backgroundColor: '#ffffff', borderRadius:4 ,width:295,height:205}}>
@@ -553,12 +636,12 @@ class App extends Component {
                 title="OK"
                 />
                </View>
-               </View> */}
+               </View> */
 
 
 
 
-               <View style={{flex:1, backgroundColor:'#111558'}}>
+               /* <View style={{flex:1, backgroundColor:'#111558'}}>
 
                <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
                <View style={{ height:72,backgroundColor: '#ffffff', borderRadius:4 ,width:295,height:205}}>
@@ -584,14 +667,14 @@ class App extends Component {
                 title="OK"
                 />
                </View>
-               </View>
+               </View> */
 
 
 
 
 
-                </View>
-            </LinearGradient>
+                /* </View> */
+            /* </LinearGradient> */
         )
     }
 

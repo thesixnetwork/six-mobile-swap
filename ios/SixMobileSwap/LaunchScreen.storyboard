@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,18 +12,35 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="topRight" semanticContentAttribute="forceRightToLeft" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="Qtl-Ul-LNV">
+                                <rect key="frame" x="6" y="269" width="363" height="396"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoswap" translatesAutoresizingMaskIntoConstraints="NO" id="rKk-oF-9Tx">
+                                <rect key="frame" x="120" y="253" width="162" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleAspectFill" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="Cuh-mC-JV4">
+                                <rect key="frame" x="67" y="431" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shapes" translatesAutoresizingMaskIntoConstraints="NO" id="qZh-Z7-JqV">
+                                <rect key="frame" x="-952" y="-690" width="1775" height="2197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
                                 <rect key="frame" x="0.0" y="647" width="375" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SixMobileSwap" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="0.0" y="202" width="375" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="0.0" y="223.5" width="375" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -34,25 +51,75 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoswap" translatesAutoresizingMaskIntoConstraints="NO" id="f7i-NX-iI3">
+                                <rect key="frame" x="107" y="177" width="161" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="3O1-XY-lRe"/>
+                                    <constraint firstAttribute="height" constant="245" id="KqV-PL-Fvg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.54358828067779541" green="0.14001667499542236" blue="0.51863777637481689" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="2" id="4rR-i3-UPs"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="7Os-PX-YyV"/>
+                            <constraint firstAttribute="trailing" secondItem="Qtl-Ul-LNV" secondAttribute="trailing" constant="20" symbolic="YES" id="Emr-D3-zkY"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Qtl-Ul-LNV" secondAttribute="trailing" constant="67" id="Fwy-2N-Woq"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="HCW-qT-N42"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="MN2-I3-ftu" secondAttribute="bottom" constant="20" id="OZV-Vh-mqD"/>
+                            <constraint firstAttribute="bottom" secondItem="Qtl-Ul-LNV" secondAttribute="bottom" constant="20" symbolic="YES" id="ObP-8z-Rkv"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="XYZ-Ph-BKX"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="6" id="aUW-10-JCj"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="6" id="aVZ-2a-Vz0"/>
                             <constraint firstItem="MN2-I3-ftu" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="akx-eg-2ui"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="Qtl-Ul-LNV" secondAttribute="bottom" constant="2" id="cpw-za-Drq"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="Qtl-Ul-LNV" secondAttribute="bottom" constant="2" id="ePE-3s-jfq"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="67" id="es5-Gj-7ug"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Qtl-Ul-LNV" secondAttribute="trailing" constant="6" id="ftU-C8-koX"/>
                             <constraint firstItem="MN2-I3-ftu" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="i1E-0Y-4RG"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" constant="1" id="moa-c2-u7t"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="269" id="tQf-ei-G5x"/>
+                            <constraint firstItem="Qtl-Ul-LNV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" symbolic="YES" id="wZI-af-RUM"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="x7j-FC-K8j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Qtl-Ul-LNV"/>
+                                <exclude reference="Cuh-mC-JV4"/>
+                                <exclude reference="qZh-Z7-JqV"/>
+                                <exclude reference="obG-Y5-kRd"/>
+                                <exclude reference="GJd-Yh-RWb"/>
+                                <exclude reference="MN2-I3-ftu"/>
+                                <exclude reference="f7i-NX-iI3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="moa-c2-u7t"/>
+                                <exclude reference="x7j-FC-K8j"/>
+                                <exclude reference="akx-eg-2ui"/>
+                                <exclude reference="i1E-0Y-4RG"/>
+                                <exclude reference="SfN-ll-jLj"/>
+                                <exclude reference="Y44-ml-fuU"/>
+                                <exclude reference="5cz-MP-9tL"/>
+                                <exclude reference="OZV-Vh-mqD"/>
+                                <exclude reference="Q3B-4B-g5h"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Shapes" width="375" height="812"/>
+        <image name="launch_screen" width="500" height="500"/>
+        <image name="logoswap" width="1600" height="2376"/>
+    </resources>
 </document>

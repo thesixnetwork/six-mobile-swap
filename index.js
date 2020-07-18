@@ -15,4 +15,4 @@ const ReduxApp = () => (
     </Provider>
 )
 
-AppRegistry.registerComponent(appName, () => ReduxApp);
+AppRegistry.registerComponent('SixMobileSwap', () => ReduxApp);
